@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>День Рождения Павла Костенко</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html,body {
+			height: 100%;
+			font-family: Roboto;}
+		h3 {
+			color: red;
+		}
+		h2 {
+			color: green;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;}
+</style>
+	<script>
+	// Set the date we're counting down to
+	var countDownDate = new Date("Aug 09, 2021 00:01").getTime();
+
+	// Update the count down every 1 second
+	var x = setInterval(function() {
+
+ 	 // Get today's date and time
+  	var now = new Date().getTime();
+
+  	// Find the distance between now and the count down date
+  	var distance = countDownDate - now;
+
+  	// Time calculations for days, hours, minutes and seconds
+  	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+  	// Display the result in the element with id="CountDown"
+  	document.getElementById("CountDown").innerHTML = days + "д " + hours + "ч "
+  	+ minutes + "м ";
+
+  	// If the count down is finished, write some text
+  	if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("CountDown").innerHTML = "День Рождения Наступил!";
+  	}
+	}, 1000);
+	</script>
+</head>
+<body>
+	<h1>Павел Костенко родился 09.08.2000</h1>
+	<h2>День рождения наступит через: <span id="CountDown"></span></h2>
+	<h3>Вы можете связаться с ним и поздравить:</h3>
+	<div>Телефон: +79638182613</div>
+	<div>Instagram:<a href="https://www.instagram.com/_tvoipahan" target="_blank">@_tvoipahan.ru</a></div>
+</body>
+</html>
